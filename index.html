@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch A Sketch</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js" defer></script>
+</head>
+<body>
+    <h1>Etch-A-Sketch</h1>
+    <div class="content">
+        <div class="settings">
+            <div class="slidertext"></div>
+            <div class="right-side-settings">
+                <input type="range" min="10" max="50" value="40" class="slider" id="myRange">
+                <button class="rainbowBtn">Rainbow</button>    
+                <button class="eraserBtn">Eraser</button>            
+                <button class="clearBtn">Clear</button>
+            </div>        
+        </div>    
+        <div class="container" ondragstart="return false;"></div>        
+    </div>
+</body>
+</html>

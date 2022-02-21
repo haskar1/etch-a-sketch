@@ -1,0 +1,104 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}  
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(247, 247, 247);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    padding: 0;
+    margin: 1rem auto;
+    font-size: 3rem;
+}
+
+.container {
+    border: 3px solid black;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    margin-right: 216px;
+    background: white;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    margin-top: 2rem;
+}
+
+.slidertext {
+    margin: auto;
+}
+
+.right-side-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    height: 400px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.slider {
+    direction: rtl;
+    appearance: none;
+    background: gray;
+    height: 9px;
+    width: 80%;
+    border-radius: 10px;
+    opacity: 0.6;
+    margin-bottom: 1rem;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: blue;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    background: blue;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+button {
+    font-size: 1.7rem;
+    background: rgba(255, 251, 244, 0.897);
+    border-radius: 7px; 
+    padding: 5px 15px;
+    border: 3px solid rgba(145, 92, 92, 0.582);
+}
+
+button:hover {
+    background: rgba(28, 104, 235, 0.1);
+}
