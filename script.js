@@ -5,9 +5,6 @@ const clearBtn = document.querySelector('.clearBtn');
 const rainbowBtn = document.querySelector('.rainbowBtn');
 const eraserBtn = document.querySelector('.eraserBtn');
 
-
-
-
 let isDown = false;
 document.body.onmousedown = () => {
     isDown = true;
@@ -15,9 +12,6 @@ document.body.onmousedown = () => {
 document.body.onmouseup = () => {
     isDown = false;
 };
-
-
-
 
 function createGrid(gridLength) {
     container.style.gridTemplateColumns =  `repeat(${gridLength}, 1fr)`;
@@ -29,7 +23,6 @@ function createGrid(gridLength) {
         square.addEventListener('mousedown', changeColor);
         square.addEventListener('mouseover', changeColor);
         container.appendChild(square);
-
     }
 }
 
@@ -74,7 +67,6 @@ eraserBtn.addEventListener('click', () => {
         countRainbow = 0;        
     }
     
-
     eraserBtn.classList.toggle('active');
     if (countEraser == 1) {
         eraserBtn.style = "none";
@@ -85,7 +77,12 @@ eraserBtn.addEventListener('click', () => {
     }
 });
 
-
+function sliderTextFunc() {
+    let square = document.querySelector(".square");
+    sliderText.style.width = `${square.offsetWidth}px`;
+    sliderText.style.height = `${square.offsetWidth}px`;
+    sliderText.style.backgroundColor = "black";    
+}
 
 slider.oninput = function() {
     container.textContent = "";
@@ -93,23 +90,16 @@ slider.oninput = function() {
     sliderTextFunc();
 }
 
-
 clearBtn.addEventListener('click', () => {
     container.textContent = "";
     createGrid(slider.value);
 });
-
 
 window.onload = function() {
     createGrid(40);
     sliderTextFunc();
 }
 
-function sliderTextFunc() {
-    let square = document.querySelector(".square");
-    sliderText.style.width = `${square.offsetWidth}px`;
-    sliderText.style.height = `${square.offsetWidth}px`;
-    sliderText.style.backgroundColor = "black";    
-}
+
 
 

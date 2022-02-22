@@ -12,6 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     background: rgb(247, 247, 247);
+    overflow: auto;
 }
 
 .content {
@@ -27,18 +28,17 @@ h1 {
 
 .container {
     border: 3px solid black;
-    width: 500px;
-    height: 500px;
+    width: 31.25rem;
+    height: 31.25rem;
     display: grid;
-    margin-right: 216px;
     background: white;
 }
 
 .settings {
     display: flex;
     flex-direction: column;
-    height: 500px;
-    width: 200px;
+    height: 31.25rem;
+    width: 12.5rem;
     justify-content: center;
     align-items: center;
     margin-right: 1rem;
@@ -49,14 +49,16 @@ h1 {
     margin: auto;
 }
 
-.right-side-settings {
+.right-side-settings .buttons {
     display: flex;
     flex-direction: column;
     gap: 3rem;
     align-items: center;
-    height: 400px;
-    width: 200px;
-    margin-bottom: 10px;
+    justify-content: center;
+    height: 25rem;
+    width: 12.5rem;
+    margin-bottom: 0.625rem;
+    padding-top: 1rem;
 }
 
 .slider {
@@ -64,10 +66,10 @@ h1 {
     appearance: none;
     background: gray;
     height: 9px;
-    width: 80%;
+    width: 100%;
     border-radius: 10px;
     opacity: 0.6;
-    margin-bottom: 1rem;
+    margin-bottom: auto auto 1rem;
 }
 
 .slider:hover {
@@ -92,13 +94,71 @@ h1 {
 }
 
 button {
-    font-size: 1.7rem;
+    font-size: 1.7em;
     background: rgb(255, 247, 233);
     border-radius: 7px; 
-    padding: 5px 15px;
+    padding: 0.3125em 1em;
     border: 3px solid rgba(145, 92, 92, 0.582);
 }
 
 button:hover {
     background: rgb(253, 239, 210);
+}
+
+@media screen and (max-width: 736px) {
+    h1 {
+        margin: 0;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .settings {
+        order: 2;
+        height: 0;
+        width: 0;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem 0 0;
+    }
+    .right-side-settings {
+        gap: 0;
+    }
+    .buttons {
+        display: flex;
+    }
+    .slidertext {
+        display: none;
+    }
+    .slider {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 508px) {
+    /* * {
+        flex: 0 1 0;
+    } */
+    h1 {
+        font-size: 3rem;
+        white-space: nowrap;
+    }
+    .container {
+        width: 100vw;
+        height: 100vw;
+    }
+    .right-side-settings {
+        max-width: 100vw;
+    }
+    .buttons {
+        max-width: 100vw;
+    }
+    button {
+        font-size: 6vw;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    h1 {
+        font-size: 15vw;
+    }
 }
