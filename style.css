@@ -4,6 +4,7 @@ html {
 
 *, *:before, *:after {
     box-sizing: inherit;
+    border: 1px solid red;
 }  
 
 body {
@@ -49,16 +50,23 @@ h1 {
     margin: auto;
 }
 
-.right-side-settings .buttons {
+.right-side-settings {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 8rem;
     align-items: center;
     justify-content: center;
     height: 25rem;
     width: 12.5rem;
     margin-bottom: 0.625rem;
     padding-top: 1rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .slider {
@@ -112,6 +120,8 @@ button:hover {
     .content {
         flex-direction: column;
     }
+    .container {
+    }
     .settings {
         order: 2;
         height: 0;
@@ -124,7 +134,8 @@ button:hover {
         gap: 0;
     }
     .buttons {
-        display: flex;
+        flex-direction: row;
+        gap: 0;
     }
     .slidertext {
         display: none;
@@ -143,8 +154,8 @@ button:hover {
         white-space: nowrap;
     }
     .container {
-        width: 100vw;
-        height: 100vw;
+        width: 90vw;
+        height: 90vw;
     }
     .right-side-settings {
         max-width: 100vw;
