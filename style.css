@@ -176,9 +176,7 @@ button:hover {
     }
     .slider {
         max-width: 50vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin-top: 3rem;
     }
 }
 
