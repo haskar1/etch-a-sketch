@@ -105,9 +105,11 @@ button:hover {
     h1 {
         margin: 0;
     }
+
     .content {
         flex-direction: column;
     }
+
     .settings {
         order: 2;
         flex-flow: row wrap;
@@ -117,15 +119,18 @@ button:hover {
         margin: 0;
         padding: 0;
     }
+
     .buttons {
         flex-direction: row;
         gap: 0;
         margin: auto;
     }
+
     .slider {
         width: 13rem;
         margin: 2rem 5rem 2rem 0;
     }
+
     .slidertext {
         margin-left: 5rem;
     }
@@ -136,36 +141,32 @@ button:hover {
         font-size: 3rem;
         white-space: nowrap;
     }
+
     .container {
         width: 90vw;
         height: 90vw;
     }
+
     .settings {
         max-width: 100vw;
         flex-flow: row wrap;
         justify-content: space-between;
     }
-    .buttons {
-        margin-top: 3rem;
-    }
+
     button {
         width: 33.33vw;
         height: 15vw;
         font-size: 6vw;
         padding: 0;
     }
+
     .slider {
         max-width: 50vw;
-        margin: 2rem 1rem 2rem 0;
+        margin: 3rem 10vw 3rem 0;
     }
+    
     .slidertext {
         width: 15vw;
-        margin-left: 2rem;
-    }
-}
-
-@media screen and (max-width: 300px) {
-    h1 {
-        font-size: 15vw;
+        margin-left: 15vw;
     }
 }
