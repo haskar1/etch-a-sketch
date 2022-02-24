@@ -4,6 +4,7 @@ html {
 
 *, *:before, *:after {
     box-sizing: inherit;
+    border: 1px solid red;
 }  
 
 body {
@@ -45,27 +46,17 @@ h1 {
     margin-top: 2rem;
 }
 
-.slidertext {
-    margin: auto;
-}
-
-.right-side-settings {
-    display: flex;
-    flex-direction: column;
-    gap: 6rem;
-    align-items: center;
-    justify-content: center;
-    height: 25rem;
-    width: 12.5rem;
-    margin-bottom: 0.625rem;
-    padding-top: 1rem;
-}
-
 .buttons {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+}
+
+.slidertext {
+    margin: auto;
 }
 
 .slider {
@@ -73,10 +64,9 @@ h1 {
     appearance: none;
     background: gray;
     height: 9px;
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
     opacity: 0.6;
-    margin: 3rem auto 1rem;
 }
 
 .slider:hover {
@@ -118,33 +108,27 @@ button:hover {
     }
     .content {
         flex-direction: column;
-        gap: 3rem;
     }
     .settings {
         order: 2;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 31.25rem;
         height: 0;
-        width: 0;
-        justify-content: center;
-        align-items: center;
-    }
-    .right-side-settings {
-        gap: 0;
-        padding: 0;
         margin: 0;
+        padding: 0;
     }
     .buttons {
         flex-direction: row;
         gap: 0;
-    }
-    .slider-container {
-        display: flex;
-        width: 20rem;
-        align-items: center;
-        justify-content: center;
+        margin: auto;
     }
     .slider {
         width: 13rem;
-        margin-bottom: 3rem;
+        margin: 2rem 5rem 2rem 0;
+    }
+    .slidertext {
+        margin-left: 5rem;
     }
 }
 
@@ -157,12 +141,10 @@ button:hover {
         width: 90vw;
         height: 90vw;
     }
-    .right-side-settings {
+    .settings {
         max-width: 100vw;
-    }
-    .slider-container {
-        max-width: 100vw;
-        margin-top: 3rem;
+        flex-flow: row wrap;
+        justify-content: space-between;
     }
     .buttons {
         margin-left: 1rem;
@@ -176,7 +158,11 @@ button:hover {
     }
     .slider {
         max-width: 50vw;
-        margin: 3rem 1rem 3rem 3rem;
+        margin: 2rem 1rem 2rem 0;
+    }
+    .slidertext {
+        width: 15vw;
+        margin-left: 2rem;
     }
 }
 
