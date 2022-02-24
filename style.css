@@ -4,7 +4,6 @@ html {
 
 *, *:before, *:after {
     box-sizing: inherit;
-    border: 1px solid red;
 }  
 
 body {
@@ -147,7 +146,6 @@ button:hover {
         justify-content: space-between;
     }
     .buttons {
-        margin-left: 1rem;
         margin-top: 3rem;
     }
     button {
